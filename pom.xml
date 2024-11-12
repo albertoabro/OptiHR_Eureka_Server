@@ -8,11 +8,11 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.albertoabadrodriguez</groupId>
-	<artifactId>OptiHR_EurekaServer</artifactId>
+	<groupId>com.albertoabadrodriguez.OptiHR</groupId>
+	<artifactId>EurekaServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>OptiHR_EurekaServer</name>
-	<description>OptiHR_EurekaServer</description>
+	<name>EurekaServer</name>
+	<description>EurekaServer</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -55,6 +55,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -79,6 +80,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<image>
+						<name>albertoabro/${project.artifactId}</name>
+					</image>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
